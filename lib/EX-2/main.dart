@@ -25,11 +25,10 @@ class Card extends StatefulWidget {
   });
 
   @override
-  State<Card> createState() => _CardState();
-
+  State<Card> createState() => CardState();
 }
 
-class _CardState extends State<Card> {
+class CardState extends State<Card> {
 
   bool isFavorite = false;
   // getter method

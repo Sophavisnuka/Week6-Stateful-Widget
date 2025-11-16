@@ -31,10 +31,10 @@ class ButtonStyle extends StatefulWidget {
   });
 
   @override
-  State<ButtonStyle> createState() => _ButtonStyleState();
+  State<ButtonStyle> createState() => ButtonStyleState();
 }
 
-class _ButtonStyleState extends State<ButtonStyle> {
+class ButtonStyleState extends State<ButtonStyle> {
 
   bool isSelected = false;
   // getter medtho
