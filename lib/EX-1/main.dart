@@ -70,7 +70,7 @@ class _ButtonStyleState extends State<ButtonStyle> {
             ),
           )
         ),
-      ),
+      )
     );
   }
 }
