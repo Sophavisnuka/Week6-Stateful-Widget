@@ -1,22 +1,28 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
-  debugShowCheckedModeBanner: false,
-  home: Scaffold(
-    backgroundColor: Colors.white,
-    appBar: AppBar(
-      backgroundColor: Colors.blue,
-      title: const Text("Favorite cards"),
-    ),
-    body: Column(
-      children: [
-        Card(title: 'Title1', description: 'Description 1'),
-        Card(title: 'Title 2', description: 'Description 2'),
-        Card(title: 'Title 3', description: 'Description 3'),
-      ],
-    ),
-  ),
-));
+class Exercise2 extends StatelessWidget {
+  const Exercise2({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: const Text("Favorite cards"),
+      ),
+      body: Column(
+        children: [
+          Card(title: 'Title1', description: 'Description 1'),
+          Card(title: 'Title 2', description: 'Description 2'),
+          Card(title: 'Title 3', description: 'Description 3'),
+        ],
+      ),
+    );
+  }
+}
 
 class Card extends StatefulWidget {
 

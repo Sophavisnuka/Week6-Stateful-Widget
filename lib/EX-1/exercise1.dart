@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-// import 'package:device_preview/device_preview.dart';
 
-void main() => 
-runApp(
-  MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Scaffold(
+class Exercise1 extends StatelessWidget {
+  const Exercise1({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
         title: const Text("Custom buttons"),
       ),
@@ -20,9 +22,9 @@ runApp(
           ],
         ),
       ),
-    ),
-  )
-);
+    );
+  }
+}
 
 class ButtonStyle extends StatefulWidget {
 
@@ -37,7 +39,7 @@ class ButtonStyle extends StatefulWidget {
 class ButtonStyleState extends State<ButtonStyle> {
 
   bool isSelected = false;
-  // getter medtho
+  // getter method
   String get buttonText => isSelected ? "Selected" : "Not Selected";
   Color get textColor => isSelected ? Colors.white : Colors.black;
   Color get buttonColor => isSelected ? Colors.blue[500]! : Colors.blue[50]!;

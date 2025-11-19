@@ -9,13 +9,6 @@ List<String> images = [
 ];
 
 
-
-void main() => runApp(MaterialApp(
-  debugShowCheckedModeBanner: false, // Why this line ? Can you explain it ?
-  // this line is to remoe the debug banner shown on the top right corner of the app
-  home: ImageSlider(),
-));
-
 class ImageSlider extends StatefulWidget {
 
   const ImageSlider({
