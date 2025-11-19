@@ -10,9 +10,9 @@ void main() => runApp(MaterialApp(
     ),
     body: Column(
       children: [
-        Card(),
-        Card(),
-        Card(),
+        Card(title: 'Title1', description: 'Description 1'),
+        Card(title: 'Title 2', description: 'Description 2'),
+        Card(title: 'Title 3', description: 'Description 3'),
       ],
     ),
   ),
@@ -20,7 +20,12 @@ void main() => runApp(MaterialApp(
 
 class Card extends StatefulWidget {
 
+  final String title;
+  final String description;
+
   const Card({
+    required this.title,
+    required this.description,
     super.key,
   });
 
@@ -31,6 +36,8 @@ class Card extends StatefulWidget {
 class CardState extends State<Card> {
 
   bool isFavorite = false;
+  String get cardTitle => widget.title;
+  String get cardDescription => widget.description;
   // getter method
   Color get iconColor => isFavorite ? Colors.red : Colors.grey;
 
@@ -56,8 +63,8 @@ class CardState extends State<Card> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Title', style: TextStyle(color: Colors.blue, fontSize: 20)),
-                    Text('Description', style: TextStyle(color: Colors.black)),
+                    Text(cardTitle, style: TextStyle(color: Colors.blue, fontSize: 20)),
+                    Text(cardDescription, style: TextStyle(color: Colors.black)),
                   ],
                 ),
               ),

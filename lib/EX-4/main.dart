@@ -57,7 +57,7 @@ class ProgressCard extends StatefulWidget {
 
 class ProgressCardState extends State<ProgressCard> {
 
-  String get name => widget.name;
+  String get getName => widget.name;
 
   int score = 0;
   double width = 0;
@@ -116,7 +116,7 @@ class ProgressCardState extends State<ProgressCard> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('My score in $name', style: TextStyle(color: Colors.black, fontSize: 25, fontWeight: FontWeight.bold)),
+          Text('My score in $getName', style: TextStyle(color: Colors.black, fontSize: 25, fontWeight: FontWeight.bold)),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
