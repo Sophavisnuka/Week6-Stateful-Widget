@@ -52,6 +52,13 @@ class CardState extends State<Card> {
       return Colors.grey;
     }
   }
+  
+  void buttonClick() {
+    setState(() {
+      isFavorite = !isFavorite;
+    });
+  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -82,11 +89,7 @@ class CardState extends State<Card> {
               ),
             ),
             IconButton(
-              onPressed: () {
-                setState(() {
-                  isFavorite = !isFavorite;
-                });
-              }, 
+              onPressed: buttonClick,
               icon: Icon(Icons.favorite),
               color: iconColor,
             ),
