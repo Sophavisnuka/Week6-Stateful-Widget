@@ -15,7 +15,7 @@ class Exercise2 extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Card(title: 'Title1', description: 'Description 1'),
+          Card(title: 'Title 1', description: 'Description 1'),
           Card(title: 'Title 2', description: 'Description 2'),
           Card(title: 'Title 3', description: 'Description 3'),
         ],
@@ -45,7 +45,13 @@ class CardState extends State<Card> {
   String get cardTitle => widget.title;
   String get cardDescription => widget.description;
   // getter method
-  Color get iconColor => isFavorite ? Colors.red : Colors.grey;
+  Color get iconColor {
+    if (isFavorite) {
+      return Colors.red;
+    } else {
+      return Colors.grey;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {

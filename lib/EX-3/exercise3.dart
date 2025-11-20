@@ -24,7 +24,7 @@ class _ImageSliderState extends State<ImageSlider> {
   void nextImages() {
     setState(() {
       currentIndex++;
-      // if currentindex = 5, then goes back to 0
+      // if current index = 5, then goes back to 0
       if (currentIndex >= images.length) {
         currentIndex = 0;
       }
